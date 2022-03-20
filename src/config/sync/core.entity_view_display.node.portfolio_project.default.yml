@@ -1,0 +1,119 @@
+uuid: 832a1524-6d2e-41a8-92a2-912247392404
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.portfolio_project.body
+    - field.field.node.portfolio_project.field_decorative_image
+    - field.field.node.portfolio_project.field_link_to_project
+    - field.field.node.portfolio_project.field_link_to_repository
+    - field.field.node.portfolio_project.field_meta_description
+    - field.field.node.portfolio_project.field_project_decorative_credit
+    - field.field.node.portfolio_project.field_project_images
+    - field.field.node.portfolio_project.field_roles_in_the_project
+    - field.field.node.portfolio_project.field_technologies
+    - field.field.node.portfolio_project.field_year
+    - node.type.portfolio_project
+  module:
+    - link
+    - text
+    - user
+id: node.portfolio_project.default
+targetEntityType: node
+bundle: portfolio_project
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_decorative_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_link_to_project:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_link_to_repository:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_meta_description:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_project_decorative_credit:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_project_images:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_roles_in_the_project:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_technologies:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_year:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

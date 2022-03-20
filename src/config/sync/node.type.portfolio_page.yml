@@ -1,0 +1,18 @@
+uuid: 811f7f07-bbdb-4b18-9648-e729e9c1536a
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Portfolio page'
+type: portfolio_page
+description: 'A regular page for the portfolio section.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

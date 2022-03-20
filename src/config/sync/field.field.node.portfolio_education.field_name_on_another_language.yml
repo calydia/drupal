@@ -1,0 +1,19 @@
+uuid: 9760b167-f3f4-45c7-b0b1-2a88a6f828df
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_name_on_another_language
+    - node.type.portfolio_education
+id: node.portfolio_education.field_name_on_another_language
+field_name: field_name_on_another_language
+entity_type: node
+bundle: portfolio_education
+label: 'Name on another language'
+description: 'If the content language is English, add the Finnish title here (if one is available). If the content is in Finnish, you can add English here. The field will handle the content language.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

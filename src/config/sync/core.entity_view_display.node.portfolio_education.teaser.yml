@@ -1,0 +1,40 @@
+uuid: 50bdf25e-d6a2-429d-8598-c3c9ab01bfbb
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.portfolio_education.body
+    - field.field.node.portfolio_education.field_certificate
+    - field.field.node.portfolio_education.field_date
+    - field.field.node.portfolio_education.field_educator
+    - field.field.node.portfolio_education.field_name_on_another_language
+    - field.field.node.portfolio_education.field_year
+    - node.type.portfolio_education
+  module:
+    - text
+    - user
+id: node.portfolio_education.teaser
+targetEntityType: node
+bundle: portfolio_education
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_certificate: true
+  field_date: true
+  field_educator: true
+  field_name_on_another_language: true
+  field_year: true

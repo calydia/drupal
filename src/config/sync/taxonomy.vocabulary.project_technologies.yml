@@ -1,0 +1,8 @@
+uuid: 5f6a9763-2b9e-42e5-b7f0-5f370575cdbc
+langcode: en
+status: true
+dependencies: {  }
+name: 'Project technologies'
+vid: project_technologies
+description: ''
+weight: 0

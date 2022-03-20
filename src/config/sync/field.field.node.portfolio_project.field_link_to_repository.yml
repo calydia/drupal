@@ -1,0 +1,23 @@
+uuid: 69451b9e-84df-4fce-8f0d-98b9bf6d62e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link_to_repository
+    - node.type.portfolio_project
+  module:
+    - link
+id: node.portfolio_project.field_link_to_repository
+field_name: field_link_to_repository
+entity_type: node
+bundle: portfolio_project
+label: 'Link to repository'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 16
+field_type: link

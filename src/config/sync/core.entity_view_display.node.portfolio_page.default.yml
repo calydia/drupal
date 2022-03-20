@@ -1,0 +1,36 @@
+uuid: a4a5da78-c0a5-4d0f-992c-ba3991144a6f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.portfolio_page.body
+    - field.field.node.portfolio_page.field_meta_description
+    - node.type.portfolio_page
+  module:
+    - text
+    - user
+id: node.portfolio_page.default
+targetEntityType: node
+bundle: portfolio_page
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_meta_description:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

@@ -1,0 +1,22 @@
+uuid: 977ebd66-bdab-4b53-a543-bf058d0999c9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: portfolio_work_experience
+label: 'Portfolio work experience'
+type: 'canonical_entities:node'
+pattern: 'work-experience/[node:title]'
+selection_criteria:
+  ae284d18-85bb-4e31-93a5-7588bbfa19ff:
+    id: node_type
+    negate: false
+    uuid: ae284d18-85bb-4e31-93a5-7588bbfa19ff
+    context_mapping:
+      node: node
+    bundles:
+      portfolio_work_experience: portfolio_work_experience
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,8 @@
+uuid: 0e6ec22e-0c9f-4e8e-98a5-5a03dda2da29
+langcode: en
+status: true
+dependencies: {  }
+name: 'Project roles'
+vid: project_roles
+description: ''
+weight: 0

@@ -1,0 +1,21 @@
+uuid: 1b333249-61ad-4512-97b0-9532114892f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_end_date
+    - node.type.portfolio_work_experience
+  module:
+    - datetime
+id: node.portfolio_work_experience.field_end_date
+field_name: field_end_date
+entity_type: node
+bundle: portfolio_work_experience
+label: 'End date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

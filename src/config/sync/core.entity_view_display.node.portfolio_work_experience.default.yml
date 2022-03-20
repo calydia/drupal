@@ -1,0 +1,71 @@
+uuid: a203ed09-8dd1-4e06-abba-b1d2f7b7300d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.portfolio_work_experience.body
+    - field.field.node.portfolio_work_experience.field_company
+    - field.field.node.portfolio_work_experience.field_end_date
+    - field.field.node.portfolio_work_experience.field_meta_description
+    - field.field.node.portfolio_work_experience.field_start_date
+    - node.type.portfolio_work_experience
+  module:
+    - datetime
+    - link
+    - text
+    - user
+id: node.portfolio_work_experience.default
+targetEntityType: node
+bundle: portfolio_work_experience
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_company:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_end_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_meta_description:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_start_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

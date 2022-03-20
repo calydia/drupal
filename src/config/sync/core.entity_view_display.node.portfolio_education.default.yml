@@ -1,0 +1,81 @@
+uuid: dc0081f2-b95e-4d59-a1b8-035756cd29c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.portfolio_education.body
+    - field.field.node.portfolio_education.field_certificate
+    - field.field.node.portfolio_education.field_date
+    - field.field.node.portfolio_education.field_educator
+    - field.field.node.portfolio_education.field_name_on_another_language
+    - field.field.node.portfolio_education.field_year
+    - node.type.portfolio_education
+  module:
+    - datetime
+    - link
+    - text
+    - user
+id: node.portfolio_education.default
+targetEntityType: node
+bundle: portfolio_education
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_certificate:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_educator:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_name_on_another_language:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_year:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

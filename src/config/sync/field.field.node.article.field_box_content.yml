@@ -1,0 +1,21 @@
+uuid: ee17f8a1-1738-4252-9ed8-9c410581bc5b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_box_content
+    - node.type.article
+  module:
+    - text
+id: node.article.field_box_content
+field_name: field_box_content
+entity_type: node
+bundle: article
+label: 'Box content'
+description: 'Content for the box on top of the blog post.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

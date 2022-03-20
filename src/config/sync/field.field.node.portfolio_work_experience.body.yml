@@ -1,0 +1,23 @@
+uuid: 721b18ad-52cf-433d-86b9-c2b6be561292
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.portfolio_work_experience
+  module:
+    - text
+id: node.portfolio_work_experience.body
+field_name: body
+entity_type: node
+bundle: portfolio_work_experience
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

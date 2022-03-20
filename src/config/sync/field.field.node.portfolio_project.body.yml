@@ -1,0 +1,23 @@
+uuid: 6f914c10-00fa-410c-8b22-3800c6e44dc1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.portfolio_project
+  module:
+    - text
+id: node.portfolio_project.body
+field_name: body
+entity_type: node
+bundle: portfolio_project
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

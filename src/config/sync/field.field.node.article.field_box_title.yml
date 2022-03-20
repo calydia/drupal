@@ -1,0 +1,19 @@
+uuid: bea6cca9-01ad-4c42-b30d-5fe354016bf5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_box_title
+    - node.type.article
+id: node.article.field_box_title
+field_name: field_box_title
+entity_type: node
+bundle: article
+label: 'Box title'
+description: 'Set a h2 title for the box on top of the blog page.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

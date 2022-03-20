@@ -1,0 +1,29 @@
+uuid: b6484fcc-b61b-464e-98ef-4477cf304fc4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_decorative_image
+    - media.type.image
+    - node.type.portfolio_project
+id: node.portfolio_project.field_decorative_image
+field_name: field_decorative_image
+entity_type: node
+bundle: portfolio_project
+label: 'Decorative image'
+description: 'Decorative image for this project, get one from e.g. Unsplash. This is used as a visual in the project listing as well as at the top of the project page.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

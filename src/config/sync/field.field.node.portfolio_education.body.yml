@@ -1,0 +1,23 @@
+uuid: 9bcef199-56c5-474f-857e-4001a2a73ec4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.portfolio_education
+  module:
+    - text
+id: node.portfolio_education.body
+field_name: body
+entity_type: node
+bundle: portfolio_education
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

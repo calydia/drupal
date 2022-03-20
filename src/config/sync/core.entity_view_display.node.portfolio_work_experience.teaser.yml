@@ -1,0 +1,38 @@
+uuid: 64d400ab-cfad-45e6-b969-5bd2e96f362a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.portfolio_work_experience.body
+    - field.field.node.portfolio_work_experience.field_company
+    - field.field.node.portfolio_work_experience.field_end_date
+    - field.field.node.portfolio_work_experience.field_meta_description
+    - field.field.node.portfolio_work_experience.field_start_date
+    - node.type.portfolio_work_experience
+  module:
+    - text
+    - user
+id: node.portfolio_work_experience.teaser
+targetEntityType: node
+bundle: portfolio_work_experience
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_company: true
+  field_end_date: true
+  field_meta_description: true
+  field_start_date: true

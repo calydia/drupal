@@ -1,0 +1,19 @@
+uuid: df3ad533-3028-473a-90c1-e98f2ad07a35
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_educator
+    - node.type.portfolio_education
+id: node.portfolio_education.field_educator
+field_name: field_educator
+entity_type: node
+bundle: portfolio_education
+label: Educator
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

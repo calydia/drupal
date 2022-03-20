@@ -1,0 +1,23 @@
+uuid: 41746e38-c635-4e75-ba00-be772d9c0616
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_company
+    - node.type.portfolio_work_experience
+  module:
+    - link
+id: node.portfolio_work_experience.field_company
+field_name: field_company
+entity_type: node
+bundle: portfolio_work_experience
+label: Company
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 16
+field_type: link

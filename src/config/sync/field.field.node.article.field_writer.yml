@@ -1,0 +1,29 @@
+uuid: 24df267b-517d-44c1-bdf5-2ede79b1f5ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_writer
+    - node.type.article
+    - node.type.blog_writer
+id: node.article.field_writer
+field_name: field_writer
+entity_type: node
+bundle: article
+label: Writer
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      blog_writer: blog_writer
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

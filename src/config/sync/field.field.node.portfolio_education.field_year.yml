@@ -1,0 +1,23 @@
+uuid: db13cb11-c8a0-499c-9aff-612c85d1dc99
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_year
+    - node.type.portfolio_education
+id: node.portfolio_education.field_year
+field_name: field_year
+entity_type: node
+bundle: portfolio_education
+label: Year
+description: 'This number field will be used for sorting the content.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

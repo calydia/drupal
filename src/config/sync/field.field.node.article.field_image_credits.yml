@@ -1,0 +1,21 @@
+uuid: 556cff92-595c-434f-90a5-c4383fa66156
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image_credits
+    - node.type.article
+  module:
+    - text
+id: node.article.field_image_credits
+field_name: field_image_credits
+entity_type: node
+bundle: article
+label: 'Image credits'
+description: 'If the image is, for example, from Unsplash, add the credits to this field. The credits will be displayed at the bottom of the page.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

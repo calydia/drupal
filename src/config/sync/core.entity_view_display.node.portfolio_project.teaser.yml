@@ -1,0 +1,48 @@
+uuid: 87ee955e-1a5a-40ff-8925-fa4b50577d2e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.portfolio_project.body
+    - field.field.node.portfolio_project.field_decorative_image
+    - field.field.node.portfolio_project.field_link_to_project
+    - field.field.node.portfolio_project.field_link_to_repository
+    - field.field.node.portfolio_project.field_meta_description
+    - field.field.node.portfolio_project.field_project_decorative_credit
+    - field.field.node.portfolio_project.field_project_images
+    - field.field.node.portfolio_project.field_roles_in_the_project
+    - field.field.node.portfolio_project.field_technologies
+    - field.field.node.portfolio_project.field_year
+    - node.type.portfolio_project
+  module:
+    - text
+    - user
+id: node.portfolio_project.teaser
+targetEntityType: node
+bundle: portfolio_project
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_decorative_image: true
+  field_link_to_project: true
+  field_link_to_repository: true
+  field_meta_description: true
+  field_project_decorative_credit: true
+  field_project_images: true
+  field_roles_in_the_project: true
+  field_technologies: true
+  field_year: true

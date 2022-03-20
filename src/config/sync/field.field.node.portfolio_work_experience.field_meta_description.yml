@@ -1,0 +1,19 @@
+uuid: d85fa88d-9c62-47cb-a9a7-8544926e5102
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_description
+    - node.type.portfolio_work_experience
+id: node.portfolio_work_experience.field_meta_description
+field_name: field_meta_description
+entity_type: node
+bundle: portfolio_work_experience
+label: 'Meta description'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
