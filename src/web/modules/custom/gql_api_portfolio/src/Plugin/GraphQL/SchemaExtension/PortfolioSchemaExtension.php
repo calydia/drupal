@@ -71,14 +71,6 @@ class PortfolioSchemaExtension extends SdlSchemaExtensionPluginBase {
         ->map('id', $builder->fromArgument('id'))
     );
 
-    // Education query
-    $registry->addFieldResolver('Query', 'education',
-      $builder->produce('entity_load')
-        ->map('type', $builder->fromValue('node'))
-        ->map('bundles', $builder->fromValue(['portfolio_education']))
-        ->map('id', $builder->fromArgument('id'))
-    );
-
     // Create project mutation.
     $registry->addFieldResolver('Mutation', 'createProject',
       $builder->produce('create_project')
@@ -339,28 +331,6 @@ class PortfolioSchemaExtension extends SdlSchemaExtensionPluginBase {
         ->map('path', $builder->fromValue('title'))
     );
 
-
-
-    // Education fields
-
-    $registry->addFieldResolver('Education', 'id',
-      $builder->produce('entity_id')
-        ->map('entity', $builder->fromParent())
-    );
-
-    $registry->addFieldResolver('Education', 'title',
-      $builder->compose(
-        $builder->produce('entity_label')
-          ->map('entity', $builder->fromParent())
-      )
-    );
-
-    $registry->addFieldResolver('Education', 'schoolInfo',
-      $builder->produce('property_path')
-        ->map('type', $builder->fromValue('entity:node'))
-        ->map('value', $builder->fromParent())
-        ->map('path', $builder->fromValue('field_school_info.value'))
-    );
 
     // Course fields
 
