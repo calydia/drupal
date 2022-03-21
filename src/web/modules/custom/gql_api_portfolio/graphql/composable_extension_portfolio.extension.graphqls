@@ -1,0 +1,22 @@
+extend type Query {
+  project(id: Int!): Project
+  projectSlug(slug: String): Project
+  projects(
+    offset: Int = 0
+    limit: Int = 10
+  ): ProjectConnection!
+  experienceSlug(slug: String): Experience
+  experiences(
+    offset: Int = 0
+    limit: Int = 10
+  ): ExperienceConnection!
+  courses(
+    offset: Int = 0
+    limit: Int = 10
+  ): CourseConnection!
+  portfolioPage(id: Int!): PortfolioPage
+}
+
+extend type Mutation {
+  createProject(data: ProjectInput): ProjectResponse
+}
