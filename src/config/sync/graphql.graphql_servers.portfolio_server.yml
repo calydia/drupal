@@ -1,0 +1,19 @@
+uuid: e297f3af-4614-4ba6-bfbe-f82a4dd4e0eb
+langcode: en
+status: true
+dependencies: {  }
+name: portfolio_server
+label: 'Portfolio server'
+endpoint: /graphql/portfolio
+debug_flag: 0
+schema: composable
+caching: true
+batching: true
+disable_introspection: false
+query_depth: null
+query_complexity: null
+schema_configuration:
+  composable:
+    extensions:
+      composable_extension_portfolio: composable_extension_portfolio
+persisted_queries_settings: {  }
