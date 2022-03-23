@@ -618,11 +618,13 @@ class MultisiteSchemaExtension extends SdlSchemaExtensionPluginBase {
           $builder->produce('property_path')
             ->map('type', $builder->fromValue('entity:node'))
             ->map('value', $builder->fromParent())
-            ->map('path', $builder->fromValue('field_image.entity')
-          ),
+            ->map('path', $builder->fromValue('field_main_image.entity')),
+          $builder->produce('property_path')
+          ->map('type', $builder->fromValue('entity:media'))
+          ->map('value', $builder->fromParent())
+          ->map('path', $builder->fromValue('field_media_image.entity')),
           $builder->produce("image_url")
-            ->map('entity',$builder->fromParent()
-          )
+            ->map('entity',$builder->fromParent())
         )
       )
     );
@@ -690,26 +692,32 @@ class MultisiteSchemaExtension extends SdlSchemaExtensionPluginBase {
 
     $registry->addFieldResolver('Article', 'mainImage',
       $builder->compose(
-      $builder->produce('property_path')
-        ->map('type', $builder->fromValue('entity:node'))
+        $builder->produce('property_path')
+          ->map('type', $builder->fromValue('entity:node'))
+          ->map('value', $builder->fromParent())
+          ->map('path', $builder->fromValue('field_blog_main_image.entity')),
+        $builder->produce('property_path')
+        ->map('type', $builder->fromValue('entity:media'))
         ->map('value', $builder->fromParent())
-        ->map('path', $builder->fromValue('field_main_image.entity')
-      ),
-      $builder->produce("image_url")
-        ->map('entity',$builder->fromParent())
+        ->map('path', $builder->fromValue('field_media_image.entity')),
+        $builder->produce("image_url")
+          ->map('entity',$builder->fromParent())
       )
     );
 
     $registry->addFieldResolver('Article', 'listingImage',
-      $builder->compose(
+    $builder->compose(
       $builder->produce('property_path')
         ->map('type', $builder->fromValue('entity:node'))
         ->map('value', $builder->fromParent())
-        ->map('path', $builder->fromValue('field_listing_image.entity')
-      ),
+        ->map('path', $builder->fromValue('field_blog_listing_image.entity')),
+      $builder->produce('property_path')
+      ->map('type', $builder->fromValue('entity:media'))
+      ->map('value', $builder->fromParent())
+      ->map('path', $builder->fromValue('field_media_image.entity')),
       $builder->produce("image_url")
         ->map('entity',$builder->fromParent())
-      )
+    )
     );
 
     // Page fields
