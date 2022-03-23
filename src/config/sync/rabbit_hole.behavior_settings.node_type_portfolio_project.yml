@@ -1,0 +1,14 @@
+uuid: 704497ac-f0d0-44df-bf5d-4e12b641a1ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.portfolio_project
+id: node_type_portfolio_project
+entity_type_id: node_type
+entity_id: portfolio_project
+action: access_denied
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied
