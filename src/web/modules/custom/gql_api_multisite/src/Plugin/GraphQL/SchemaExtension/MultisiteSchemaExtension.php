@@ -213,10 +213,12 @@ class MultisiteSchemaExtension extends SdlSchemaExtensionPluginBase {
     );
 
     $registry->addFieldResolver('Project', 'slug',
-      $builder->produce('property_path')
-      ->map('type', $builder->fromValue('entity:node'))
-      ->map('value', $builder->fromParent())
-      ->map('path', $builder->fromValue('field_slug.value'))
+      $builder->compose(
+        $builder->produce('entity_url')
+          ->map('entity', $builder->fromParent()),
+        $builder->produce('url_path')
+          ->map('url', $builder->fromParent())
+      )
     );
 
     $registry->addFieldResolver('Project', 'technologies',
@@ -464,10 +466,12 @@ class MultisiteSchemaExtension extends SdlSchemaExtensionPluginBase {
     );
 
     $registry->addFieldResolver('Experience', 'slug',
-      $builder->produce('property_path')
-        ->map('type', $builder->fromValue('entity:node'))
-        ->map('value', $builder->fromParent())
-        ->map('path', $builder->fromValue('field_slug.value'))
+      $builder->compose(
+        $builder->produce('entity_url')
+          ->map('entity', $builder->fromParent()),
+        $builder->produce('url_path')
+          ->map('url', $builder->fromParent())
+      )
     );
 
     $registry->addFieldResolver('Experience', 'endDate',
@@ -528,10 +532,12 @@ class MultisiteSchemaExtension extends SdlSchemaExtensionPluginBase {
     );
 
     $registry->addFieldResolver('PortfolioPage', 'slug',
-      $builder->produce('property_path')
-        ->map('type', $builder->fromValue('entity:node'))
-        ->map('value', $builder->fromParent())
-        ->map('path', $builder->fromValue('field_slug.value'))
+      $builder->compose(
+        $builder->produce('entity_url')
+          ->map('entity', $builder->fromParent()),
+        $builder->produce('url_path')
+          ->map('url', $builder->fromParent())
+      )
     );
 
     $registry->addFieldResolver('ProjectConnection', 'total',
@@ -663,10 +669,12 @@ class MultisiteSchemaExtension extends SdlSchemaExtensionPluginBase {
     );
 
     $registry->addFieldResolver('Article', 'slug',
-      $builder->produce('property_path')
-      ->map('type', $builder->fromValue('entity:node'))
-      ->map('value', $builder->fromParent())
-      ->map('path', $builder->fromValue('field_slug.value'))
+      $builder->compose(
+        $builder->produce('entity_url')
+          ->map('entity', $builder->fromParent()),
+        $builder->produce('url_path')
+          ->map('url', $builder->fromParent())
+      )
     );
 
 
@@ -749,13 +757,14 @@ class MultisiteSchemaExtension extends SdlSchemaExtensionPluginBase {
     )
   );
 
-    $registry->addFieldResolver('Page', 'slug',
-      $builder->produce('property_path')
-        ->map('type', $builder->fromValue('entity:node'))
-        ->map('value', $builder->fromParent())
-        ->map('path', $builder->fromValue('field_slug.value')
-      )
-    );
+  $registry->addFieldResolver('Page', 'slug',
+    $builder->compose(
+      $builder->produce('entity_url')
+        ->map('entity', $builder->fromParent()),
+      $builder->produce('url_path')
+        ->map('url', $builder->fromParent())
+    )
+  );
 
     $registry->addFieldResolver('ArticleConnection', 'total',
       $builder->callback(function (QueryConnection $connection) {
