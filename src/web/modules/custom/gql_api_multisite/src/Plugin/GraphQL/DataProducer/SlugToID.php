@@ -85,9 +85,7 @@ class Slugtoid extends DataProducerPluginBase implements ContainerFactoryPluginI
     $storage = $this->entityManager->getStorage('node');
     $type = $storage->getEntityType();
 
-    $slug_slash = '/' . $slug;
-
-    $node_url = \Drupal::service('path_alias.manager')->getPathByAlias($slug_slash);
+    $node_url = \Drupal::service('path_alias.manager')->getPathByAlias($slug);
     $nid = str_replace('/node/', '', $node_url);
     $node = \Drupal::entityTypeManager()->getStorage('node')->load($nid);
 
