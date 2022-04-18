@@ -1,0 +1,60 @@
+# Requires the following to be added to GitHub Repository secrets:
+#
+# KUBE_HOST=https://kubernetes.api.url:6443
+# KUBE_BEARER_TOKEN=eyJhbGciOiJSUzI1NiIsImtpZCI6I...service account's token
+# KUBE_NAMESPACE=drupal
+# KUBE_DEPLOYMENT_NAME=drupal-app
+# KUBE_CONTAINER_NAME=app
+# IMAGE_NAME=drupal
+# DOCKERHUB_USERNAME=username
+# DOCKERHUB_TOKEN=token
+
+name: Build, push and deploy the image
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+
+      - name: Set up Docker Buildx
+        id: buildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build and push
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          platforms: linux/amd64,linux/arm64
+          file: deploy/Dockerfile
+          pull: true
+          push: true
+          tags: |
+            ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.IMAGE_NAME }}:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.IMAGE_NAME }}:${{ github.run_number }}
+
+      # - name: Setup kubectl
+      #   uses: azure/setup-kubectl@v1
+      #   id: install
+
+      # - name: Deploy to Kubernetes
+      #   run: |
+      #     kubectl --server=${{ secrets.KUBE_HOST }} --token=${{ secrets.KUBE_BEARER_TOKEN }} --insecure-skip-tls-verify -n ${{ secrets.KUBE_NAMESPACE }} set image deployment ${{ secrets.KUBE_DEPLOYMENT_NAME }} ${{ secrets.KUBE_CONTAINER_NAME }}=${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.IMAGE_NAME }}:${{ github.run_number }}

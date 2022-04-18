@@ -21,3 +21,8 @@ src/.idea/
 
 # Ignore .env files as they are personal
 src/.env
+
+# CI
+deploy/k8s/kustomization.yaml
+build_hooks_circleci.circleCiConfig.yml
+build_hooks.frontend_environment.circle_ci_gatsby.yml
