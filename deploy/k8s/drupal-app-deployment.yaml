@@ -1,0 +1,99 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: drupal-app
+spec:
+  selector:
+    matchLabels:
+      app: drupal-app
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 100%
+      maxUnavailable: 25%
+  template:
+    metadata:
+      labels:
+        app: drupal-app
+    spec:
+      containers:
+        - name: app
+          image: schala/drupal:latest
+          env:
+            - name: DB_HOST
+              value: "drupal-mariadb"
+            - name: DB_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: drupal-configmap
+                  key: MYSQL_DATABASE
+            - name: DB_USER
+              valueFrom:
+                configMapKeyRef:
+                  name: drupal-configmap
+                  key: MYSQL_USER
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: drupal-secret
+                  key: MYSQL_PASSWORD
+            - name: SITE_HASH_SALT
+              valueFrom:
+                secretKeyRef:
+                  name: drupal-secret
+                  key: SITE_HASH_SALT
+            - name: SITE_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: drupal-configmap
+                  key: SITE_URL
+          readinessProbe:
+            httpGet:
+              path: /user/login
+              port: 8080
+              httpHeaders:
+                - name: Host
+                  value: localhost
+            failureThreshold: 2
+            periodSeconds: 15
+          livenessProbe:
+            httpGet:
+              path: /user/login
+              port: 8080
+              httpHeaders:
+                - name: Host
+                  value: localhost
+            failureThreshold: 2
+            periodSeconds: 15
+          startupProbe:
+            httpGet:
+              path: /user/login
+              port: 8080
+              httpHeaders:
+                - name: Host
+                  value: localhost
+            failureThreshold: 30
+            periodSeconds: 5
+            successThreshold: 1
+            timeoutSeconds: 1
+          resources:
+            requests:
+              cpu: 100m
+              memory: 100M
+            limits:
+              cpu: 2000m
+              memory: 4000M
+          volumeMounts:
+            - name: drupal-files
+              mountPath: /var/www/html/web/sites/default/files
+            - name: drupal-secret
+              mountPath: /var/www/html/config/sync/build_hooks.frontend_environment.circle_ci_gatsby.yml
+              subPath: build_hooks.frontend_environment.circle_ci_gatsby.yml
+      volumes:
+        - name: drupal-files
+          persistentVolumeClaim:
+            claimName: drupal-app-files-pvc
+        - name: drupal-secret
+          secret:
+            secretName: drupal-secret

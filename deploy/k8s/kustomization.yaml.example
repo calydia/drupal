@@ -1,0 +1,46 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: drupal
+
+generatorOptions:
+  disableNameSuffixHash: true
+
+configMapGenerator:
+  - name: drupal-configmap
+    literals:
+      - MYSQL_DATABASE=drupal
+      - MYSQL_USER=drupal
+      - SITE_URL=site.url.here
+
+secretGenerator:
+  - name: drupal-secret
+    type: Opaque
+    files:
+      - build_hooks.frontend_environment.circle_ci_gatsby.yml
+    literals:
+      - SITE_HASH_SALT=set_site_hash_salt_here
+      - MYSQL_ROOT_PASSWORD=set_password_here
+      - MYSQL_PASSWORD=set_password_here
+      - CIRCLECI_API_KEY=replace_circleci_user_api_key_here
+
+resources:
+  - drupal-namespace.yaml
+  - drupal-mariadb-deployment.yaml
+  - drupal-mariadb-pma-deployment.yaml
+  - drupal-mariadb-pvc.yaml
+  - drupal-mariadb-svc.yaml
+  - drupal-app-deployment.yaml
+  - drupal-app-ingress.yaml
+  - drupal-app-pvc.yaml
+  - drupal-app-svc.yaml
+  - drupal-github-actions-sa.yaml
+
+vars:
+  - name: SITE_URL
+    objref:
+      apiVersion: v1
+      kind: ConfigMap
+      name: drupal-configmap
+    fieldref:
+      fieldpath: data.SITE_URL
