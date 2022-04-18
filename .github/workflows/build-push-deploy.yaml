@@ -51,10 +51,10 @@ jobs:
             ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.IMAGE_NAME }}:latest
             ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.IMAGE_NAME }}:${{ github.run_number }}
 
-      # - name: Setup kubectl
-      #   uses: azure/setup-kubectl@v1
-      #   id: install
+      - name: Setup kubectl
+        uses: azure/setup-kubectl@v1
+        id: install
 
-      # - name: Deploy to Kubernetes
-      #   run: |
-      #     kubectl --server=${{ secrets.KUBE_HOST }} --token=${{ secrets.KUBE_BEARER_TOKEN }} --insecure-skip-tls-verify -n ${{ secrets.KUBE_NAMESPACE }} set image deployment ${{ secrets.KUBE_DEPLOYMENT_NAME }} ${{ secrets.KUBE_CONTAINER_NAME }}=${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.IMAGE_NAME }}:${{ github.run_number }}
+      - name: Deploy to Kubernetes
+        run: |
+          kubectl --server=${{ secrets.KUBE_HOST }} --token=${{ secrets.KUBE_BEARER_TOKEN }} --insecure-skip-tls-verify -n ${{ secrets.KUBE_NAMESPACE }} set image deployment ${{ secrets.KUBE_DEPLOYMENT_NAME }} ${{ secrets.KUBE_CONTAINER_NAME }}=${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.IMAGE_NAME }}:${{ github.run_number }}
