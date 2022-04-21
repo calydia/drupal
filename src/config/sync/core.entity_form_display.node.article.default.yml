@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.article.field_box_title
     - field.field.node.article.field_image_credits
     - field.field.node.article.field_meta_description
+    - field.field.node.article.field_short_slug
     - field.field.node.article.field_writer
     - node.type.article
   module:
@@ -94,6 +95,14 @@ content:
     region: content
     settings:
       rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_short_slug:
+    type: string_textfield
+    weight: 26
+    region: content
+    settings:
+      size: 60
       placeholder: ''
     third_party_settings: {  }
   field_writer:

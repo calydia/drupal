@@ -668,6 +668,14 @@ class MultisiteSchemaExtension extends SdlSchemaExtensionPluginBase {
       )
     );
 
+    $registry->addFieldResolver('Article', 'shortSlug',
+      $builder->produce('property_path')
+        ->map('type', $builder->fromValue('entity:node'))
+        ->map('value', $builder->fromParent())
+        ->map('path', $builder->fromValue('field_short_slug.value')
+      )
+    );
+
     $registry->addFieldResolver('Article', 'slug',
       $builder->compose(
         $builder->produce('entity_url')

@@ -1,0 +1,19 @@
+uuid: 8e78102c-5621-494d-bbe4-8b2181817f33
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_short_slug
+    - node.type.article
+id: node.article.field_short_slug
+field_name: field_short_slug
+entity_type: node
+bundle: article
+label: 'Short slug'
+description: 'Add a short slug for the page. This is used in the front to combine the blog article URL from the category and this slug.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
