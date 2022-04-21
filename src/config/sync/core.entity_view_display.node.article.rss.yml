@@ -12,7 +12,6 @@ dependencies:
     - field.field.node.article.field_box_title
     - field.field.node.article.field_image_credits
     - field.field.node.article.field_meta_description
-    - field.field.node.article.field_short_slug
     - field.field.node.article.field_writer
     - node.type.article
   module:
@@ -36,5 +35,4 @@ hidden:
   field_box_title: true
   field_image_credits: true
   field_meta_description: true
-  field_short_slug: true
   field_writer: true

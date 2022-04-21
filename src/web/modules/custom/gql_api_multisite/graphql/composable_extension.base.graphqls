@@ -100,7 +100,6 @@ type Article {
   imageCredits: String
   slug: String
   metaDescription: String
-  shortSlug: String
 }
 
 type Page {
