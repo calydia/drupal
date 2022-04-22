@@ -624,7 +624,7 @@ class MultisiteSchemaExtension extends SdlSchemaExtensionPluginBase {
           $builder->produce('property_path')
             ->map('type', $builder->fromValue('entity:node'))
             ->map('value', $builder->fromParent())
-            ->map('path', $builder->fromValue('field_main_image.entity')),
+            ->map('path', $builder->fromValue('field_writer_image.entity')),
           $builder->produce('property_path')
           ->map('type', $builder->fromValue('entity:media'))
           ->map('value', $builder->fromParent())
