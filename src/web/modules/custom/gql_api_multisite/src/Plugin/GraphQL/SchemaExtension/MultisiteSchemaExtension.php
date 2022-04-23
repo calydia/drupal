@@ -660,6 +660,22 @@ class MultisiteSchemaExtension extends SdlSchemaExtensionPluginBase {
       )
     );
 
+    $registry->addFieldResolver('Article', 'boxContent',
+      $builder->produce('property_path')
+        ->map('type', $builder->fromValue('entity:node'))
+        ->map('value', $builder->fromParent())
+        ->map('path', $builder->fromValue('field_box_content.value')
+      )
+    );
+
+    $registry->addFieldResolver('Article', 'boxTitle',
+      $builder->produce('property_path')
+        ->map('type', $builder->fromValue('entity:node'))
+        ->map('value', $builder->fromParent())
+        ->map('path', $builder->fromValue('field_box_title.value')
+      )
+    );
+
     $registry->addFieldResolver('Article', 'metaDescription',
       $builder->produce('property_path')
         ->map('type', $builder->fromValue('entity:node'))
