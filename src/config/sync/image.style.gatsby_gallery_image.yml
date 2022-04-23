@@ -1,0 +1,15 @@
+uuid: c10fc64b-f127-462e-a5d0-e71169a32637
+langcode: en
+status: true
+dependencies: {  }
+name: gatsby_gallery_image
+label: 'Gatsby gallery image'
+effects:
+  eb8ea798-7c1d-49da-bcab-7578181649f9:
+    uuid: eb8ea798-7c1d-49da-bcab-7578181649f9
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 400
+      height: 400
+      anchor: center-top
