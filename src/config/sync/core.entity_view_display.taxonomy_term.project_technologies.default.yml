@@ -1,0 +1,22 @@
+uuid: 839bfe13-4e6c-4733-ac64-b95e4097210f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.project_technologies.field_field_tech_url
+    - taxonomy.vocabulary.project_technologies
+id: taxonomy_term.project_technologies.default
+targetEntityType: taxonomy_term
+bundle: project_technologies
+mode: default
+content:
+  field_field_tech_url:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  description: true
