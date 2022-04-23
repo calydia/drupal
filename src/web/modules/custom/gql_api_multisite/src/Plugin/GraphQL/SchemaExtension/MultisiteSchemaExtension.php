@@ -268,7 +268,7 @@ class MultisiteSchemaExtension extends SdlSchemaExtensionPluginBase {
       $builder->produce('property_path')
       ->map('type', $builder->fromValue('entity:taxonomy_term'))
       ->map('value', $builder->fromParent())
-      ->map('path', $builder->fromValue('field_tech_url.value')),
+      ->map('path', $builder->fromValue('field_field_tech_url.value')),
     );
 
     $registry->addFieldResolver('Project', 'decorativeImage',
