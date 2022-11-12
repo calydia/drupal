@@ -23,6 +23,7 @@
     "drupal/graphql": "^4.3",
     "drupal/pathauto": "^1.9",
     "drupal/rabbit_hole": "^1.0@beta",
+    "drupal/upgrade_status": "^3.17",
     "drush/drush": "^11.0"
   },
   "conflict": {
