@@ -7,7 +7,7 @@ module:
   block: 0
   block_content: 0
   breakpoint: 0
-  ckeditor: 0
+  ckeditor5: 0
   comment: 0
   config: 0
   contact: 0
@@ -38,7 +38,6 @@ module:
   path: 0
   path_alias: 0
   rabbit_hole: 0
-  rdf: 0
   rh_node: 0
   rh_taxonomy: 0
   search: 0
