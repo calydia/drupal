@@ -24,13 +24,13 @@
     "drupal/pathauto": "^1.9",
     "drupal/rabbit_hole": "^1.0@beta",
     "drupal/typed_data": "1.x-dev@dev",
-    "drupal/upgrade_status": "^3.18",
+    "drupal/upgrade_status": "^4",
     "drush/drush": "^11.0"
   },
   "conflict": {
     "drupal/drupal": "*"
   },
-  "minimum-stability": "beta",
+  "minimum-stability": "alpha",
   "prefer-stable": true,
   "config": {
     "sort-packages": true,
