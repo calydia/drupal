@@ -160,7 +160,7 @@ resourceFields:
     enhancer:
       id: ''
   field_blog_category:
-    disabled: true
+    disabled: false
     fieldName: field_blog_category
     publicName: field_blog_category
     enhancer:
