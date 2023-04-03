@@ -5,7 +5,7 @@ dependencies:
   config:
     - media.type.image
 id: media--image
-disabled: false
+disabled: true
 path: media/image
 resourceType: media--image
 resourceFields:
