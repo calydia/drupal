@@ -1,15 +1,10 @@
 # Requires the following to be added to GitHub Repository secrets:
 #
-# KUBE_HOST=https://kubernetes.api.url:6443
-# KUBE_BEARER_TOKEN=eyJhbGciOiJSUzI1NiIsImtpZCI6I...service account's token
-# KUBE_NAMESPACE=drupal
-# KUBE_DEPLOYMENT_NAME=drupal-app
-# KUBE_CONTAINER_NAME=app
 # IMAGE_NAME=drupal
 # DOCKERHUB_USERNAME=username
 # DOCKERHUB_TOKEN=token
 
-name: Build, push and deploy the image
+name: Build and push the image
 
 on:
   push:
@@ -50,11 +45,3 @@ jobs:
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.IMAGE_NAME }}:latest
             ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.IMAGE_NAME }}:${{ github.run_number }}
-
-      - name: Setup kubectl
-        uses: azure/setup-kubectl@v3
-        id: install
-
-      - name: Deploy to Kubernetes
-        run: |
-          kubectl --server=${{ secrets.KUBE_HOST }} --token=${{ secrets.KUBE_BEARER_TOKEN }} --insecure-skip-tls-verify -n ${{ secrets.KUBE_NAMESPACE }} set image deployment ${{ secrets.KUBE_DEPLOYMENT_NAME }} ${{ secrets.KUBE_CONTAINER_NAME }}=${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.IMAGE_NAME }}:${{ github.run_number }}
