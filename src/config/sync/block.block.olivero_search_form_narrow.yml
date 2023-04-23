@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - search
+    - user
   theme:
     - olivero
 _core:
@@ -20,4 +21,11 @@ settings:
   label_display: '0'
   provider: search
   page_id: ''
-visibility: {  }
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      administrator: administrator
