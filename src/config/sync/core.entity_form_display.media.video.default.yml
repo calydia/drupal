@@ -3,6 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.video.ableplayer_chapter
+    - field.field.media.video.ableplayer_description
+    - field.field.media.video.ableplayer_poster_image
+    - field.field.media.video.ableplayer_sign_language
+    - field.field.media.video.field_ableplayer_media_caption
     - field.field.media.video.field_media_video_file
     - media.type.video
   module:
@@ -15,11 +20,49 @@ targetEntityType: media
 bundle: video
 mode: default
 content:
+  ableplayer_chapter:
+    type: file_generic
+    weight: 97
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  ableplayer_description:
+    type: file_generic
+    weight: 97
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  ableplayer_poster_image:
+    type: file_generic
+    weight: 97
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  ableplayer_sign_language:
+    type: file_generic
+    weight: 97
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
   created:
     type: datetime_timestamp
     weight: 10
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_ableplayer_media_caption:
+    type: media_library_widget
+    weight: 97
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_media_video_file:
     type: file_generic
