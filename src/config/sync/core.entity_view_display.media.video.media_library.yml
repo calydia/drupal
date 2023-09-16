@@ -4,6 +4,11 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.media_library
+    - field.field.media.video.ableplayer_chapter
+    - field.field.media.video.ableplayer_description
+    - field.field.media.video.ableplayer_poster_image
+    - field.field.media.video.ableplayer_sign_language
+    - field.field.media.video.field_ableplayer_media_caption
     - field.field.media.video.field_media_video_file
     - image.style.thumbnail
     - media.type.video
@@ -28,7 +33,12 @@ content:
     weight: 0
     region: content
 hidden:
+  ableplayer_chapter: true
+  ableplayer_description: true
+  ableplayer_poster_image: true
+  ableplayer_sign_language: true
   created: true
+  field_ableplayer_media_caption: true
   field_media_video_file: true
   name: true
   uid: true

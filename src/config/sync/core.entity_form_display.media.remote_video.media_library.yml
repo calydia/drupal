@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.media.media_library
+    - field.field.media.remote_video.ableplayer_audio_description
     - field.field.media.remote_video.field_media_oembed_video
     - media.type.remote_video
 _core:
@@ -14,6 +15,7 @@ bundle: remote_video
 mode: media_library
 content: {  }
 hidden:
+  ableplayer_audio_description: true
   created: true
   field_media_oembed_video: true
   name: true
