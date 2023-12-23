@@ -30,7 +30,7 @@
     "drupal/siteimprove": "^2.0",
     "drupal/typed_data": "1.x-dev@dev",
     "drupal/upgrade_status": "^4",
-    "drush/drush": "^11.0"
+    "drush/drush": "^12"
   },
   "conflict": {
     "drupal/drupal": "*"

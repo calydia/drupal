@@ -1,0 +1,10 @@
+_core:
+  default_config_hash: cmVrRx1lohRenVYM-PvUnjxPo-tGVMMmr6lv4B5kpi0
+token: 330dd2e89ddd404291b1588cadf5a444
+domain_plugin_id: siteimprovedomain_simple
+prepublish_enabled: false
+api_username: ''
+api_key: ''
+enabled_content_types: {  }
+enabled_taxonomies: {  }
+use_latest_experience: true
