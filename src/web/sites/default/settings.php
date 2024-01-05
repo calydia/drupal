@@ -10,9 +10,6 @@ $settings['trusted_host_patterns'] = [
     '^'.addcslashes(getenv('SITE_URL') ?: getenv('DDEV_SITENAME') . '.ddev.site', ".").'$',
     'localhost'
 ];
-if (getenv('IS_DDEV_PROJECT') == 'false') {
-  $settings['file_public_base_url'] = 'https://' . getenv('SITE_URL') . '/sites/default/files';
-}
 $settings['file_scan_ignore_directories'] = [
     'node_modules',
     'bower_components',
