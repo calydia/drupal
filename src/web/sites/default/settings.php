@@ -29,6 +29,11 @@ $databases['default']['default'] = array (
     'driver' => 'mysql',
 );
 
+if (getenv('SITE_URL') !== null && !empty(getenv('SITE_URL'))) {
+  $settings['reverse_proxy'] = TRUE;
+  $settings['reverse_proxy_addresses'] = ['0.0.0.0'];
+}
+
 // Automatically generated include for settings managed by ddev.
 $ddev_settings = dirname(__FILE__) . '/settings.ddev.php';
 if (getenv('IS_DDEV_PROJECT') == 'true' && is_readable($ddev_settings)) {
