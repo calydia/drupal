@@ -32,6 +32,7 @@ $databases['default']['default'] = array (
 if (getenv('SITE_URL') !== null && !empty(getenv('SITE_URL'))) {
   $settings['reverse_proxy'] = TRUE;
   $settings['reverse_proxy_addresses'] = ['0.0.0.0'];
+  $settings['reverse_proxy_trusted_headers'] = \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_FOR | \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_HOST | \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_PORT | \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_PROTO;
 }
 
 // Automatically generated include for settings managed by ddev.
