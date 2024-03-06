@@ -5,7 +5,6 @@ charset = utf-8
 end_of_line = lf
 indent_style = space
 insert_final_newline = true
-max_line_length = null
 trim_trailing_whitespace = true
 indent_size = 2
 
