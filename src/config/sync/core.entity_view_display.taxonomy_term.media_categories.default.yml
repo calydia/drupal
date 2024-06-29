@@ -1,0 +1,23 @@
+uuid: 96421caa-73d3-45e0-a59c-a14cba0f967a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.media_categories.rabbit_hole__settings
+    - taxonomy.vocabulary.media_categories
+  module:
+    - text
+id: taxonomy_term.media_categories.default
+targetEntityType: taxonomy_term
+bundle: media_categories
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  rabbit_hole__settings: true

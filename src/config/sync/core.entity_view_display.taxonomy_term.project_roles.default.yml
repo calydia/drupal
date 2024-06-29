@@ -1,0 +1,23 @@
+uuid: 2ce93188-53ec-4ea7-923f-4c78ef7bdcc1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.project_roles.rabbit_hole__settings
+    - taxonomy.vocabulary.project_roles
+  module:
+    - text
+id: taxonomy_term.project_roles.default
+targetEntityType: taxonomy_term
+bundle: project_roles
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  rabbit_hole__settings: true

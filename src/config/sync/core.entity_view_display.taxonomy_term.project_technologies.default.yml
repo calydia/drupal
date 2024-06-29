@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.taxonomy_term.project_technologies.field_field_tech_url
+    - field.field.taxonomy_term.project_technologies.rabbit_hole__settings
     - taxonomy.vocabulary.project_technologies
 id: taxonomy_term.project_technologies.default
 targetEntityType: taxonomy_term
@@ -20,3 +21,4 @@ content:
     region: content
 hidden:
   description: true
+  rabbit_hole__settings: true

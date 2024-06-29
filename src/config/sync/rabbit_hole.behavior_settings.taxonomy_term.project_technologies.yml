@@ -1,0 +1,13 @@
+uuid: a3a15683-33ea-4c01-8755-05a281a63169
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.project_technologies
+id: taxonomy_term.project_technologies
+targetEntityType: taxonomy_term
+bundle: project_technologies
+action: access_denied
+no_bypass: false
+bypass_message: false
+configuration: {  }

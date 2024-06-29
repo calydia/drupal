@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Media categories'
 vid: media_categories
-description: ''
+description: null
 weight: 0
+new_revision: false

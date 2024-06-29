@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.blog_writer.body
     - field.field.node.blog_writer.field_writer_image
+    - field.field.node.blog_writer.rabbit_hole__settings
     - node.type.blog_writer
   module:
     - text
@@ -30,3 +31,4 @@ content:
     region: content
 hidden:
   field_writer_image: true
+  rabbit_hole__settings: true

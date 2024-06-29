@@ -1,0 +1,13 @@
+uuid: b69c07f6-8891-4036-90f9-d6cef9ff670c
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.blog_categories
+id: taxonomy_term.blog_categories
+targetEntityType: taxonomy_term
+bundle: blog_categories
+action: access_denied
+no_bypass: false
+bypass_message: false
+configuration: {  }

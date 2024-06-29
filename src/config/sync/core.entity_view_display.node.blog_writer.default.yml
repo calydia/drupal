@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.blog_writer.body
     - field.field.node.blog_writer.field_writer_image
+    - field.field.node.blog_writer.rabbit_hole__settings
     - node.type.blog_writer
   module:
     - text
@@ -35,4 +36,5 @@ content:
     third_party_settings: {  }
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  rabbit_hole__settings: true

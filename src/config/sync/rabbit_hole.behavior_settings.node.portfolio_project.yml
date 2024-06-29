@@ -1,0 +1,13 @@
+uuid: 704497ac-f0d0-44df-bf5d-4e12b641a1ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.portfolio_project
+id: node.portfolio_project
+targetEntityType: node
+bundle: portfolio_project
+action: access_denied
+no_bypass: false
+bypass_message: false
+configuration: {  }

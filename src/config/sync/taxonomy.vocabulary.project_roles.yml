@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Project roles'
 vid: project_roles
-description: ''
+description: null
 weight: 0
+new_revision: false

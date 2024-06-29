@@ -8,11 +8,13 @@ dependencies:
     - field.field.node.portfolio_work_experience.field_end_date
     - field.field.node.portfolio_work_experience.field_meta_description
     - field.field.node.portfolio_work_experience.field_start_date
+    - field.field.node.portfolio_work_experience.rabbit_hole__settings
     - node.type.portfolio_work_experience
   module:
     - datetime
     - link
     - path
+    - rabbit_hole
     - text
 id: node.portfolio_work_experience.default
 targetEntityType: node
@@ -75,6 +77,13 @@ content:
     region: content
     settings:
       display_label: true
+    third_party_settings: {  }
+  rabbit_hole__settings:
+    type: rabbit_hole_default
+    weight: 100
+    region: content
+    settings:
+      advanced: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox

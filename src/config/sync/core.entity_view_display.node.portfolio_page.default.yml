@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.portfolio_page.body
     - field.field.node.portfolio_page.field_meta_description
+    - field.field.node.portfolio_page.rabbit_hole__settings
     - node.type.portfolio_page
   module:
     - text
@@ -33,4 +34,5 @@ content:
     third_party_settings: {  }
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  rabbit_hole__settings: true

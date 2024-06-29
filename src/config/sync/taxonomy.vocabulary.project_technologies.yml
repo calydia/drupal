@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Project technologies'
 vid: project_technologies
-description: ''
+description: null
 weight: 0
+new_revision: false

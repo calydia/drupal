@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.article.field_image_credits
     - field.field.node.article.field_meta_description
     - field.field.node.article.field_writer
+    - field.field.node.article.rabbit_hole__settings
     - node.type.article
   module:
     - text
@@ -44,3 +45,4 @@ hidden:
   field_image_credits: true
   field_meta_description: true
   field_writer: true
+  rabbit_hole__settings: true

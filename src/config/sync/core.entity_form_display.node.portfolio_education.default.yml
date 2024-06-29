@@ -9,11 +9,13 @@ dependencies:
     - field.field.node.portfolio_education.field_educator
     - field.field.node.portfolio_education.field_name_on_another_language
     - field.field.node.portfolio_education.field_year
+    - field.field.node.portfolio_education.rabbit_hole__settings
     - node.type.portfolio_education
   module:
     - datetime
     - link
     - path
+    - rabbit_hole
     - text
 id: node.portfolio_education.default
 targetEntityType: node
@@ -85,6 +87,13 @@ content:
     region: content
     settings:
       display_label: true
+    third_party_settings: {  }
+  rabbit_hole__settings:
+    type: rabbit_hole_default
+    weight: 100
+    region: content
+    settings:
+      advanced: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox

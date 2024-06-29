@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.portfolio_page.body
     - field.field.node.portfolio_page.field_meta_description
+    - field.field.node.portfolio_page.rabbit_hole__settings
     - node.type.portfolio_page
   module:
     - text
@@ -30,3 +31,4 @@ content:
     region: content
 hidden:
   field_meta_description: true
+  rabbit_hole__settings: true

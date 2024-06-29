@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.portfolio_education.field_educator
     - field.field.node.portfolio_education.field_name_on_another_language
     - field.field.node.portfolio_education.field_year
+    - field.field.node.portfolio_education.rabbit_hole__settings
     - node.type.portfolio_education
   module:
     - datetime
@@ -78,4 +79,5 @@ content:
     third_party_settings: {  }
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  rabbit_hole__settings: true

@@ -1,0 +1,13 @@
+uuid: 4d951d30-9055-47d3-b581-021444eac5bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.article
+id: node.article
+targetEntityType: node
+bundle: article
+action: access_denied
+no_bypass: false
+bypass_message: false
+configuration: {  }
