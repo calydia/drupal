@@ -43,8 +43,6 @@ module:
   path_alias: 0
   phpass: 0
   rabbit_hole: 0
-  rh_node: 0
-  rh_taxonomy: 0
   search: 0
   serialization: 0
   shortcut: 0
@@ -53,7 +51,6 @@ module:
   text: 0
   token: 0
   toolbar: 0
-  tour: 0
   typed_data: 0
   update: 0
   upgrade_status: 0
