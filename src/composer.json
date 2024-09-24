@@ -27,7 +27,7 @@
         "drupal/rabbit_hole": "^2",
         "drupal/typed_data": "^2",
         "drupal/upgrade_status": "^4",
-        "drush/drush": "^12"
+        "drush/drush": "^13"
     },
     "conflict": {
         "drupal/drupal": "*"
