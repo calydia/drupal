@@ -7,7 +7,7 @@ dependencies:
     - field.field.media.able_player_caption.ableplayer_caption
     - media.type.able_player_caption
   module:
-    - ableplayer
+    - file
 _core:
   default_config_hash: gndPiDtozTA_XujeIQaCC1FvWyvGE1xiZFYeyTAa8o0
 id: media.able_player_caption.able_player_caption_view_mode
@@ -16,15 +16,12 @@ bundle: able_player_caption
 mode: able_player_caption_view_mode
 content:
   ableplayer_caption:
-    type: ableplayer_caption
+    type: file_default
     label: above
     settings:
-      controls: true
-      autoplay: false
-      loop: false
-      multiple_file_display_type: tags
+      use_description_as_link_text: true
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
 hidden:
   created: true

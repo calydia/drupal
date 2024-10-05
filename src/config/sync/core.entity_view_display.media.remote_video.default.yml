@@ -6,8 +6,6 @@ dependencies:
     - field.field.media.remote_video.ableplayer_audio_description
     - field.field.media.remote_video.field_media_oembed_video
     - media.type.remote_video
-  module:
-    - ableplayer
 _core:
   default_config_hash: zQoBQ0BtnMM_rlDdgftyu6eI4AVs9mo5K8xq7NFO2Zc
 id: media.remote_video.default
@@ -16,11 +14,12 @@ bundle: remote_video
 mode: default
 content:
   field_media_oembed_video:
-    type: ableplayer_remote_video
-    label: hidden
-    settings: {  }
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
 hidden:
   ableplayer_audio_description: true
