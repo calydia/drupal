@@ -1,0 +1,14 @@
+uuid: 6218af5b-39c4-44bd-abfa-4ef932536748
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.portfolio_education
+id: node_type_portfolio_education
+entity_type_id: node_type
+entity_id: portfolio_education
+action: page_redirect
+allow_override: 1
+redirect: '<front>'
+redirect_code: 307
+redirect_fallback_action: access_denied
