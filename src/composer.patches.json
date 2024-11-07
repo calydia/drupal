@@ -1,0 +1,7 @@
+{
+  "patches": {
+    "drupal/rabbit_hole": {
+      "Rabbit hole 2x Drupal 11": "rabbit_hole.diff"
+    }
+  }
+}

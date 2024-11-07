@@ -16,6 +16,7 @@
     ],
     "require": {
         "composer/installers": "^1.9",
+        "cweagans/composer-patches": "^1.7",
         "drupal/core": "^10.3",
         "drupal/core-composer-scaffold": "^10.3",
         "drupal/core-project-message": "^10.3",
@@ -38,7 +39,8 @@
         "allow-plugins": {
             "composer/installers": true,
             "drupal/core-composer-scaffold": true,
-            "drupal/core-project-message": true
+            "drupal/core-project-message": true,
+            "cweagans/composer-patches": true
         }
     },
     "extra": {
@@ -51,6 +53,7 @@
                 "[web-root]/sites/development.services.yml": false
             }
         },
+        "patches-file": "composer.patches.json",
         "installer-paths": {
             "web/core": [
                 "type:drupal-core"
