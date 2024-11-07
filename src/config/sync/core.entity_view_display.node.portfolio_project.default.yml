@@ -13,7 +13,6 @@ dependencies:
     - field.field.node.portfolio_project.field_roles_in_the_project
     - field.field.node.portfolio_project.field_technologies
     - field.field.node.portfolio_project.field_year
-    - field.field.node.portfolio_project.rabbit_hole__settings
     - node.type.portfolio_project
   module:
     - link
@@ -117,5 +116,4 @@ content:
     third_party_settings: {  }
     weight: 100
     region: content
-hidden:
-  rabbit_hole__settings: true
+hidden: {  }

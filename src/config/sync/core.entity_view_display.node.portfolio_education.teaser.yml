@@ -10,7 +10,6 @@ dependencies:
     - field.field.node.portfolio_education.field_educator
     - field.field.node.portfolio_education.field_name_on_another_language
     - field.field.node.portfolio_education.field_year
-    - field.field.node.portfolio_education.rabbit_hole__settings
     - node.type.portfolio_education
   module:
     - text
@@ -39,4 +38,3 @@ hidden:
   field_educator: true
   field_name_on_another_language: true
   field_year: true
-  rabbit_hole__settings: true

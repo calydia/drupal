@@ -9,7 +9,6 @@ dependencies:
     - field.field.node.portfolio_work_experience.field_end_date
     - field.field.node.portfolio_work_experience.field_meta_description
     - field.field.node.portfolio_work_experience.field_start_date
-    - field.field.node.portfolio_work_experience.rabbit_hole__settings
     - node.type.portfolio_work_experience
   module:
     - text
@@ -37,4 +36,3 @@ hidden:
   field_end_date: true
   field_meta_description: true
   field_start_date: true
-  rabbit_hole__settings: true

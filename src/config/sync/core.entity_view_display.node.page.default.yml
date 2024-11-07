@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.node.page.body
     - field.field.node.page.field_meta_description
-    - field.field.node.page.rabbit_hole__settings
     - node.type.page
   module:
     - text
@@ -34,5 +33,4 @@ content:
   links:
     weight: 101
     region: content
-hidden:
-  rabbit_hole__settings: true
+hidden: {  }

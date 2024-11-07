@@ -4,11 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.taxonomy_term.project_technologies.field_field_tech_url
-    - field.field.taxonomy_term.project_technologies.rabbit_hole__settings
     - taxonomy.vocabulary.project_technologies
   module:
     - path
-    - rabbit_hole
     - text
 id: taxonomy_term.project_technologies.default
 targetEntityType: taxonomy_term
@@ -44,13 +42,6 @@ content:
     weight: 3
     region: content
     settings: {  }
-    third_party_settings: {  }
-  rabbit_hole__settings:
-    type: rabbit_hole_default
-    weight: 100
-    region: content
-    settings:
-      advanced: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
