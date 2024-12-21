@@ -20,7 +20,7 @@ settings:
   label: 'Search form (narrow)'
   label_display: '0'
   provider: search
-  page_id: ''
+  page_id: null
 visibility:
   user_role:
     id: user_role

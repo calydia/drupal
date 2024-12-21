@@ -1,5 +1,7 @@
 _core:
   default_config_hash: F6gp1fQb1oABiagpESXFjiTJiNH3COB9VBxLHcB98fg
+logo:
+  path: ''
 logo_provider: custom
 logo_managed: 124
 logo_max_filesize: 1048576
