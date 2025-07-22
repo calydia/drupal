@@ -25,6 +25,16 @@ http:
       tls: false
       # middlewares:
       #   - "drupal-redirectHttps"
+    drupal-xhgui-80-http:
+      entrypoints:
+        - http-8143
+      rule: HostRegexp(`^drupal\.ddev\.site$`)
+      
+      service: "drupal-xhgui-80"
+      ruleSyntax: v3
+      tls: false
+      # middlewares:
+      #   - "drupal-redirectHttps"
     
     
     
@@ -49,6 +59,17 @@ http:
       tls: true
       
     
+    drupal-xhgui-80-https:
+      entrypoints:
+        - http-8142
+      rule: HostRegexp(`^drupal\.ddev\.site$`)
+      
+      service: "drupal-xhgui-80"
+      ruleSyntax: v3
+      
+      tls: true
+      
+    
 
   middlewares:
     drupal-redirectHttps:
@@ -68,6 +89,12 @@ http:
           - url: http://ddev-drupal-web:8025
         
     
+    
+    drupal-xhgui-80:
+      loadbalancer:
+        servers:
+          - url: http://ddev-drupal-xhgui:80
+        
     
     
 
