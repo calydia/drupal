@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.media_categories.rabbit_hole__settings
     - taxonomy.vocabulary.media_categories
   module:
     - text
@@ -18,4 +19,5 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-hidden: {  }
+hidden:
+  rabbit_hole__settings: true

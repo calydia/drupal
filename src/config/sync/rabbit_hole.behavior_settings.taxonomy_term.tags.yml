@@ -1,0 +1,16 @@
+uuid: 0f349314-9298-449c-bf9d-06263c0a81b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.tags
+id: taxonomy_term.tags
+targetEntityType: taxonomy_term
+bundle: tags
+action: page_redirect
+no_bypass: false
+bypass_message: false
+configuration:
+  redirect: '<front>'
+  redirect_code: 307
+  redirect_fallback_action: access_denied

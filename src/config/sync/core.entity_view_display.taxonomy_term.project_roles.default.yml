@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.project_roles.rabbit_hole__settings
     - taxonomy.vocabulary.project_roles
   module:
     - text
@@ -18,4 +19,5 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-hidden: {  }
+hidden:
+  rabbit_hole__settings: true

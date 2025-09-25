@@ -1,0 +1,16 @@
+uuid: 2b5bfd9a-cee5-46c5-b4d1-8ab0083dd5c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.project_roles
+id: taxonomy_term.project_roles
+targetEntityType: taxonomy_term
+bundle: project_roles
+action: page_redirect
+no_bypass: false
+bypass_message: false
+configuration:
+  redirect: '<front>'
+  redirect_code: 307
+  redirect_fallback_action: access_denied

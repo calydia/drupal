@@ -1,0 +1,16 @@
+uuid: b5a7ebcf-d2c6-4ff1-8bab-7f78e58d61a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.project_technologies
+id: taxonomy_term.project_technologies
+targetEntityType: taxonomy_term
+bundle: project_technologies
+action: page_redirect
+no_bypass: false
+bypass_message: false
+configuration:
+  redirect: '<front>'
+  redirect_code: 307
+  redirect_fallback_action: access_denied

@@ -1,0 +1,16 @@
+uuid: 6b8f8a4e-476d-46a9-86c6-b90098cada83
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.portfolio_work_experience
+id: node.portfolio_work_experience
+targetEntityType: node
+bundle: portfolio_work_experience
+action: page_redirect
+no_bypass: false
+bypass_message: false
+configuration:
+  redirect: '<front>'
+  redirect_code: 307
+  redirect_fallback_action: access_denied

@@ -1,0 +1,16 @@
+uuid: f63b6da0-9b34-4472-b948-b11d5e05aa61
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.portfolio_page
+id: node.portfolio_page
+targetEntityType: node
+bundle: portfolio_page
+action: page_redirect
+no_bypass: false
+bypass_message: false
+configuration:
+  redirect: '<front>'
+  redirect_code: 307
+  redirect_fallback_action: access_denied

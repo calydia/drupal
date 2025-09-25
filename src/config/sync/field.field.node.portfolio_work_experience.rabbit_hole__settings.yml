@@ -1,0 +1,21 @@
+uuid: 6b91e189-7eb3-4310-aecb-9d41d6d66f63
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.rabbit_hole__settings
+    - node.type.portfolio_work_experience
+  module:
+    - rabbit_hole
+id: node.portfolio_work_experience.rabbit_hole__settings
+field_name: rabbit_hole__settings
+entity_type: node
+bundle: portfolio_work_experience
+label: 'Rabbit Hole settings'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: rabbit_hole

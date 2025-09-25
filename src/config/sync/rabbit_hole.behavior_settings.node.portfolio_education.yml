@@ -1,0 +1,16 @@
+uuid: 6218af5b-39c4-44bd-abfa-4ef932536748
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.portfolio_education
+id: node.portfolio_education
+targetEntityType: node
+bundle: portfolio_education
+action: page_redirect
+no_bypass: false
+bypass_message: false
+configuration:
+  redirect: '<front>'
+  redirect_code: 307
+  redirect_fallback_action: access_denied
