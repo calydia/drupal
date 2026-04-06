@@ -97,6 +97,7 @@ type Article {
   mainImage: String
   listingImage: String
   category: String
+  secondaryCategories: [String]
   imageCredits: String
   slug: String
   metaDescription: String

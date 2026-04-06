@@ -2,6 +2,7 @@
 
 namespace Drupal\gql_api_multisite\Plugin\GraphQL\SchemaExtension;
 
+use Drupal\Core\Entity\EntityInterface;
 use Drupal\graphql\GraphQL\ResolverBuilder;
 use Drupal\graphql\GraphQL\ResolverRegistryInterface;
 use Drupal\graphql\GraphQL\Response\ResponseInterface;
@@ -712,6 +713,18 @@ class MultisiteSchemaExtension extends SdlSchemaExtensionPluginBase {
       $builder->produce('entity_label')
         ->map('entity',$builder->fromParent())
       )
+    );
+
+    $registry->addFieldResolver('Article', 'secondaryCategories',
+      $builder->callback(function (EntityInterface $article) {
+        if (!$article->hasField('field_blog_secondary_categories')) {
+          return [];
+        }
+
+        return array_map(function (EntityInterface $term) {
+          return $term->label();
+        }, $article->get('field_blog_secondary_categories')->referencedEntities());
+      })
     );
 
     $registry->addFieldResolver('Article', 'mainImage',
