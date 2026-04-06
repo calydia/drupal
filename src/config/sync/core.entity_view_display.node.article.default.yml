@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.article.field_blog_category
     - field.field.node.article.field_blog_listing_image
     - field.field.node.article.field_blog_main_image
+    - field.field.node.article.field_blog_secondary_categories
     - field.field.node.article.field_box_content
     - field.field.node.article.field_box_title
     - field.field.node.article.field_image_credits
@@ -56,6 +57,14 @@ content:
       link: false
     third_party_settings: {  }
     weight: 104
+    region: content
+  field_blog_secondary_categories:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 109
     region: content
   field_box_content:
     type: text_default

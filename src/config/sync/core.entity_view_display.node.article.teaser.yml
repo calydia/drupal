@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.article.field_blog_category
     - field.field.node.article.field_blog_listing_image
     - field.field.node.article.field_blog_main_image
+    - field.field.node.article.field_blog_secondary_categories
     - field.field.node.article.field_box_content
     - field.field.node.article.field_box_title
     - field.field.node.article.field_image_credits
@@ -40,6 +41,7 @@ hidden:
   field_blog_category: true
   field_blog_listing_image: true
   field_blog_main_image: true
+  field_blog_secondary_categories: true
   field_box_content: true
   field_box_title: true
   field_image_credits: true

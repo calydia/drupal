@@ -1,0 +1,16 @@
+uuid: 3488617d-bc63-4601-934f-8329a06655e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.blog_secondary_categories
+id: taxonomy_term.blog_secondary_categories
+targetEntityType: taxonomy_term
+bundle: blog_secondary_categories
+action: page_redirect
+no_bypass: false
+bypass_message: false
+configuration:
+  redirect: '<front>'
+  redirect_code: 307
+  redirect_fallback_action: access_denied

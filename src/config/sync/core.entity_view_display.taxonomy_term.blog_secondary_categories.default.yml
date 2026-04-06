@@ -1,0 +1,23 @@
+uuid: 948e19d2-3280-4c34-9f5b-c5945e172750
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.blog_secondary_categories.rabbit_hole__settings
+    - taxonomy.vocabulary.blog_secondary_categories
+  module:
+    - text
+id: taxonomy_term.blog_secondary_categories.default
+targetEntityType: taxonomy_term
+bundle: blog_secondary_categories
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  rabbit_hole__settings: true
