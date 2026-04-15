@@ -7,8 +7,10 @@ use Drupal\graphql\GraphQL\ResolverBuilder;
 use Drupal\graphql\GraphQL\ResolverRegistryInterface;
 use Drupal\graphql\GraphQL\Response\ResponseInterface;
 use Drupal\graphql\Plugin\GraphQL\SchemaExtension\SdlSchemaExtensionPluginBase;
-use Drupal\gql_api_multisite\GraphQL\Response\ProjectResponse;
 use Drupal\gql_api_multisite\GraphQL\Response\ArticleResponse;
+use Drupal\gql_api_multisite\GraphQL\Response\CourseResponse;
+use Drupal\gql_api_multisite\GraphQL\Response\ExperienceResponse;
+use Drupal\gql_api_multisite\GraphQL\Response\ProjectResponse;
 use Drupal\gql_api_multisite\Wrappers\QueryConnection;
 
 /**
@@ -24,7 +26,7 @@ class MultisiteSchemaExtension extends SdlSchemaExtensionPluginBase {
   /**
    * {@inheritdoc}
    */
-  public function registerResolvers(ResolverRegistryInterface $registry) {
+  public function registerResolvers(ResolverRegistryInterface $registry): void {
     $builder = new ResolverBuilder();
 
     // Project queries
@@ -135,9 +137,9 @@ class MultisiteSchemaExtension extends SdlSchemaExtensionPluginBase {
       })
     );
 
-    $registry->addFieldResolver('CourseResponse', 'course',
+    $registry->addFieldResolver('CourseResponse', 'listing',
       $builder->callback(function (CourseResponse $response) {
-        return $response->listing();
+        return $response->course();
       })
     );
 
@@ -147,9 +149,9 @@ class MultisiteSchemaExtension extends SdlSchemaExtensionPluginBase {
       })
     );
 
-    $registry->addFieldResolver('ExperienceResponse', 'experience',
+    $registry->addFieldResolver('ExperienceResponse', 'listing',
       $builder->callback(function (ExperienceResponse $response) {
-        return $response->listing();
+        return $response->experience();
       })
     );
 

@@ -15,12 +15,12 @@
         }
     ],
     "require": {
-        "composer/installers": "^1.9",
+        "composer/installers": "^2.3",
         "drupal/core": "^11",
         "drupal/core-composer-scaffold": "^11",
         "drupal/core-project-message": "^11",
         "drupal/core-recommended": "^11",
-        "drupal/graphql": "^4.3",
+        "drupal/graphql": "^5.0@beta",
         "drupal/jsonapi_extras": "^3.23",
         "drupal/pathauto": "^1.9",
         "drupal/rabbit_hole": "^2",
