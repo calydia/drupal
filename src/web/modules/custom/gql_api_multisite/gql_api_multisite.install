@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * @file
+ * Install and update hooks for gql_api_multisite.
+ */
+
+declare(strict_types=1);
+
+/**
+ * Normalize GraphQL server validation settings after GraphQL 5 upgrade.
+ */
+function gql_api_multisite_update_11001(): void {
+  $config_factory = \Drupal::configFactory();
+  $server_config_names = $config_factory->listAll('graphql.graphql_servers.');
+
+  foreach ($server_config_names as $config_name) {
+    $server = $config_factory->getEditable($config_name);
+    $changed = FALSE;
+
+    foreach (['query_depth', 'query_complexity'] as $key) {
+      if (!is_int($server->get($key))) {
+        $server->set($key, (int) $server->get($key));
+        $changed = TRUE;
+      }
+    }
+
+    if ($changed) {
+      $server->save(TRUE);
+    }
+  }
+}
