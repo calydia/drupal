@@ -2,17 +2,18 @@ uuid: 5558a8ff-7ff2-482f-b682-cc0d23dd52e7
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.portfolio_project
   module:
     - node
 id: portfolio_project
 label: 'Portfolio project'
 type: 'canonical_entities:node'
-pattern: '[node:title]'
+pattern: '/[node:title]'
 selection_criteria:
   a5324a0f-66d5-4a30-b722-922ea4103300:
     id: 'entity_bundle:node'
     negate: false
-    uuid: a5324a0f-66d5-4a30-b722-922ea4103300
     context_mapping:
       node: node
     bundles:
