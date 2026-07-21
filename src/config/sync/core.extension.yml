@@ -9,7 +9,6 @@ module:
   ckeditor5: 0
   comment: 0
   config: 0
-  contact: 0
   contextual: 0
   ctools: 0
   datetime: 0
@@ -23,7 +22,6 @@ module:
   gql_api_multisite: 0
   graphql: 0
   help: 0
-  history: 0
   image: 0
   jsonapi: 0
   jsonapi_extras: 0
