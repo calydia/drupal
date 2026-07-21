@@ -1,8 +1,9 @@
+uuid: d1b6fe56-bb51-46ff-8fc6-be741d956189
 langcode: en
 status: true
 dependencies:
   module:
-    - help
+    - search_help
 id: help_search
 label: Help
 path: help

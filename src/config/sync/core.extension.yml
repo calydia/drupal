@@ -44,6 +44,8 @@ module:
   phpass: 0
   rabbit_hole: 0
   search: 0
+  search_help: 0
+  search_node: 0
   serialization: 0
   shortcut: 0
   system: 0
