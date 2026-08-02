@@ -30,6 +30,11 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  *     "category" = @ContextDefinition("integer",
  *       label = @Translation("Category"),
  *       required = FALSE
+ *     ),
+ *     "featured_only" = @ContextDefinition("boolean",
+ *       label = @Translation("Featured category posts only"),
+ *       required = FALSE,
+ *       default_value = FALSE
  *     )
  *   }
  * )
@@ -90,7 +95,7 @@ class Queryarticles extends DataProducerPluginBase implements ContainerFactoryPl
    * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
    * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
    */
-  public function resolve($offset, $limit, $category, RefinableCacheableDependencyInterface $metadata) {
+  public function resolve($offset, $limit, $category, $featured_only, RefinableCacheableDependencyInterface $metadata) {
     if (!$limit > static::MAX_LIMIT) {
       throw new UserError(sprintf('Exceeded maximum query limit: %s.', static::MAX_LIMIT));
     }
@@ -103,6 +108,10 @@ class Queryarticles extends DataProducerPluginBase implements ContainerFactoryPl
 
     if ($category) {
       $query->condition('field_blog_category', $category);
+    }
+
+    if ($featured_only) {
+      $query->condition('field_featured_category_post', 1);
     }
 
     $query->condition($type->getKey('bundle'), 'article');

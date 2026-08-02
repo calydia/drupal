@@ -1,0 +1,23 @@
+uuid: 1eec9f35-3b96-486b-93fc-66b2de0f0001
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_featured_category_post
+    - node.type.article
+id: node.article.field_featured_category_post
+field_name: field_featured_category_post
+entity_type: node
+bundle: article
+label: 'Featured category post'
+description: 'Recommend this article as a starting point for its primary blog category. If several articles are selected in one category, the newest is used.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

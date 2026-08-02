@@ -92,6 +92,7 @@ class MultisiteSchemaExtension extends SdlSchemaExtensionPluginBase {
         ->map('offset', $builder->fromArgument('offset'))
         ->map('limit', $builder->fromArgument('limit'))
         ->map('category', $builder->fromArgument('category'))
+        ->map('featured_only', $builder->fromArgument('featuredOnly'))
     );
 
     $registry->addFieldResolver('Query', 'page',
@@ -726,6 +727,16 @@ class MultisiteSchemaExtension extends SdlSchemaExtensionPluginBase {
         return array_map(function (EntityInterface $term) {
           return $term->label();
         }, $article->get('field_blog_secondary_categories')->referencedEntities());
+      })
+    );
+
+    $registry->addFieldResolver('Article', 'featuredCategoryPost',
+      $builder->callback(function (EntityInterface $article) {
+        if (!$article->hasField('field_featured_category_post')) {
+          return FALSE;
+        }
+
+        return (bool) $article->get('field_featured_category_post')->value;
       })
     );
 

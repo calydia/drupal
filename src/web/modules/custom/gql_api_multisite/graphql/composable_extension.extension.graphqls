@@ -21,6 +21,7 @@ extend type Query {
     offset: Int = 0
     limit: Int = 10
     category: Int
+    featuredOnly: Boolean = false
   ): ArticleConnection!
   page(id: Int!): Page
 }
