@@ -154,7 +154,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '<a href="https://blog.sanna.ninja/{{ field_blog_category_1 }}{{ view_node }}">{{ title }} </a>'
+            text: '<a href="https://sanna.a11y.ing/blog/{{ field_blog_category_1 }}{{ view_node }}">{{ title }} </a>'
             make_link: false
             path: ''
             absolute: false
@@ -195,6 +195,7 @@ display:
           type: string
           settings:
             link_to_entity: false
+            link_rel: canonical
           group_column: value
           group_columns: {  }
           group_rows: true
