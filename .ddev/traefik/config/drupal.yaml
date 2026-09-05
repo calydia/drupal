@@ -92,3 +92,7 @@ http:
     
     
 
+tls:
+  certificates:
+    - certFile: /mnt/ddev-global-cache/traefik/certs/drupal.crt
+      keyFile: /mnt/ddev-global-cache/traefik/certs/drupal.key
