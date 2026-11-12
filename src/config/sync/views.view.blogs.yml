@@ -89,7 +89,8 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: '{{ field_blog_category_1|lower }}'
+            text: >-
+              {% set category = field_blog_category_1|lower|trim %}{{ category in ['life', 'cats', 'games'] ? 'personal/' ~ category : category }}
             make_link: false
             path: ''
             absolute: false
