@@ -24,7 +24,7 @@
         "drupal/pathauto": "^1.9",
         "drupal/rabbit_hole": "^2",
         "drupal/typed_data": "^2",
-        "drupal/upgrade_status": "^4",
+        "drupal/upgrade_status": "^5",
         "drush/drush": "^13"
     },
     "conflict": {
